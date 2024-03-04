@@ -1,0 +1,10 @@
+const promise1 = Promise.resolve(5)
+const promise2 = Promise.resolve(10)
+
+const promise = new Promise(function (resolve) {
+   Promise.all([promise1,promise2]).then( res => {
+      resolve(res.reduce((sum,num) => sum+num))
+   })
+})
+
+promise.then(res)
