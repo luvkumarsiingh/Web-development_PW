@@ -1,0 +1,43 @@
+ques 3:
+console.log((i>=0)?((i===0)?("zero"):("not zero and positive")):("negative"))
+
+ques-6:
+let mode = "debit"
+let ans =0;
+amount = 1000;
+switch(mode){
+case "credit":{
+  ans = amount + (amount)*0.02;
+console.log(ans);
+}
+;
+break;
+case "debit":{
+  ans = amount + (amount)*0.15;
+console.log(ans);
+}
+;
+break;
+case"paypal":{
+  ans = amount + (amount)*0.03;
+console.log(ans);
+}
+;
+break;
+
+default:
+  console.log("please select a payment method")
+}
+ques8:
+const n =13
+sum =0
+let i=1
+do{
+  sum = sum+i;
+  i++
+}
+while(i<n)
+console.log(sum)
+
+
+
