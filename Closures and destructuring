@@ -1,0 +1,164 @@
+1)<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+      button{
+        padding: 5px;
+        border-radius: 10px;
+        border: none;
+        background-color : rgb(77, 210, 77);;
+      }   
+     
+      button:hover{
+        background-color: green;
+      }
+      
+      main{
+       display: flex;
+       text-align: center;
+
+      }
+      body{
+        background-color: black;
+      }
+
+      p{
+        color: aliceblue;
+      }
+    </style>
+</head>
+
+<body>
+     <div id="main">
+     <p id="para">
+
+      </p>
+    <button id="clicker">Click me</button>
+    </div>
+</body>
+<script>
+function Counter(){
+    let value = 0
+    return () => {
+        document.getElementById('para').innerHTML = value++;
+    }
+}
+ document.querySelector('#clicker').onclick = Counter() ;
+</script>
+</html>
+
+//2
+let order = {
+    orderId: '123456',
+    productName: 'Laptop',
+    quantity: 2,
+}
+
+const {orderId, productName,quantity} = order
+console.log(orderId)
+console.log( productName);
+console.log(quantity);
+
+//3,4,5
+function createCart() {
+    // Initialize the cart array
+    let cart = [];
+
+    // Return a function that provides methods to interact with the cart
+    return {
+        // Method to add an item to the cart
+        addItem: function(itemName,cost) {
+           let item = cart.find(i=>i.price === cost && i.name == itemName);
+           if(item){
+             item.quantity++;
+           }
+           else{
+            cart.push({
+                productId: Math.floor(1000 * Math.random()),
+                name: itemName,
+                quantity: 1,
+                price: cost
+            })
+           }
+            console.log(`${itemName} has been added to the cart.`);
+        },
+        // Method to remove an item from the cart
+        removeItem: function(itemName,cost) {
+         const index = cart.findIndex(i => i.name === itemName && i.price === cost)
+         if(index !== -1){
+            cart.splice(index,1)
+           console.log(`${itemName} has been removed from cart`)
+        }
+        else{
+            console.log(`${itemName} not present in the cart`)
+        }
+        },
+        // Method to get the current items in the cart
+        getCartItems: function() {
+            return cart.slice(); // Return a copy of the cart array
+        }
+    };
+}
+
+// Example usage
+const myCart = createCart();
+
+myCart.addItem('lehenga',2000);
+myCart.addItem('lehenga',201000);
+myCart.addItem('lehenga',2000);
+myCart.addItem('saree',800);
+myCart.addItem('suit',1200);
+myCart.removeItem('lehenga',201000);
+console.log('Current cart items:', myCart.getCartItems());
+
+ myCart.removeItem('saree');
+
+ console.log('Current cart items after removal:', myCart.getCartItems());
+
+
+//6
+function createPlaylists(){
+let playList = []
+
+return{
+createPlaylist: function(songName,artist,playlistName) {
+    let playlist = playList.find(i=> i.name === playlistName)
+    if(playlist){
+        playlist.songs.push({
+             name:songName,
+             artist: artist
+        })
+    }
+   else{
+     playList.push({
+      name: playlistName,
+      songs: [
+        {
+        name: songName,
+        artist: artist
+       }
+    ]
+   })
+   }
+ 
+  console.log(`Song '${songName}' by '${artist}' has been added to the playlist '${playlistName}'.`);
+},
+
+showPlaylists: function() {
+   return playList.slice()
+}};
+
+}
+
+const myList = createPlaylists();
+
+myList.createPlaylist('love','luv','love');
+myList.createPlaylist('Heartbreak Anthem', 'Luv', 'Love');
+myList.createPlaylist('Joyful Melody', 'Jazzy', 'Joy');
+myList.createPlaylist('Relaxing Tunes', 'Calm', 'Chill');
+
+console.log('Current playlists: ',JSON.stringify(myList.showPlaylists(),null,2));
+
