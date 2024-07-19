@@ -1,0 +1,95 @@
+////1
+//  const orderList = [
+//     {name: 'Laptop', price: 120000 },
+//     {name: 'Mobile', price: 7000 },
+//     {name: 'Mobile Charger', price: 1500 },
+//     {name: 'Laptop Charger', price: 10500 },  
+// ]
+
+// let sum = 0; 
+
+// function total(List){
+// List.forEach((order) =>
+//      {sum += order.price
+//     });
+//     return sum;
+
+// }
+// console.log(`total: ${total(orderList)}`)
+
+
+////2
+//  const randomG = () => {
+//        let num =  setInterval(()=>{
+//            console.log(10*Math.random())
+//         },2000);
+//     return num;
+//  }
+
+//  randomG()
+
+
+////3
+// let expenses = [
+//     {amount: 100, category:'Utilities'},
+//     {amount: 200, category:'Groceries'},
+//     {amount: 50, category:'Entertainment'},
+// ];
+// let tax = []
+// expenses.map((expenses)=>{
+//    tax.push((expenses.amount)/10)
+// })
+
+// console.log(tax)
+
+////4
+// let expenses = [
+//     {amount: 100, category:'Utilities'},
+//     {amount: 200, category:'Groceries'},
+//     {amount: 50, category:'Entertainment'},
+// ];
+
+// const ans = expenses.filter((expenses)=> expenses.category == 'Groceries');
+// console.log(ans)
+
+////5
+// let expenses = [
+//     {amount: 100, category:'Utilities'},
+//     {amount: 200, category:'Groceries'},
+//     {amount: 50, category:'Entertainment'},
+// ];
+// const ans = expenses.reduce((sum,expenses) => 
+//     {return sum += expenses.amount},0);
+// console.log(ans);
+
+////6
+// let expenses = [
+//     {amount: 100, category:'Utilities'},
+//     {amount: 200, category:'Groceries'},
+//     {amount: 50, category:'Entertainment'},
+// ];
+
+// function categorizeExpense(item) {
+//     if(item.amount > 100){
+//         return 'high Expense'
+//     }
+
+//  else{
+//     return 'low expense'
+//    }
+// }
+// let categorizedExpenses = expenses.map((...expenses) => categorizeExpense(...expenses))
+
+// console.log(categorizedExpenses);
+
+////7
+let originalNumbers = [2, 5, 8, 10, 3];
+function twice(e){
+    return e*2
+}
+originalNumbers.forEach((originalNumbers) => {
+   return  twice(originalNumbers)
+});
+
+console.log(originalNumbers); // [4, 10, 16, 20, 6]
+
