@@ -1,0 +1,117 @@
+function gradeStudent(marks) {
+    if (marks > 90) {
+        return 'A Grade';
+    } else if (marks > 70 && marks <= 90) {
+        return 'B Grade';
+    } else if (marks > 50 && marks <= 70) {
+        return 'C Grade';
+    } else {
+        return 'F Grade';
+    }
+}
+
+// Test cases
+console.log(gradeStudent(95));  // Output: A Grade
+console.log(gradeStudent(85));  // Output: B Grade
+console.log(gradeStudent(65));  // Output: C Grade
+console.log(gradeStudent(45));  // Output: F Grade
+
+
+////2
+function generateNumbersBetween(num1, num2) {
+    const result = [];
+    for (let i = num1 + 1; i < num2; i++) {
+        result.push(i);
+    }
+    return result;
+}
+
+// Example usage:
+const num1 = 10;
+const num2 = 15;
+console.log(generateNumbersBetween(num1, num2));  // Output: [11, 12, 13, 14]
+
+////3
+function checkNumber(num) {
+    const result = num > 0 ? 'positive' : num < 0 ? 'negative' : 'zero';
+    console.log(result);
+}
+
+
+////4
+let y = (x++, x + 2);
+console.log(y); 
+
+
+// Example 2: Using the comma operator in a for loop
+for (let i = 0, j = 10; i < j; i++, j--) {
+    console.log(`i: ${i}, j: ${j}`);
+}
+
+
+////5
+function login(username, password) {
+    const validUsername = "admin";
+    const validPassword = "12375";
+
+    if (username === validUsername && password === validPassword) {
+        console.log("Login successful");
+    } else {
+        console.log("Invalid credentials");
+    }
+}
+
+// Test cases
+login("admin", "12375");   // Output: Login successful
+login("admin", "wrong");   // Output: Invalid credentials
+login("user", "12375");    // Output: Invalid credentials
+login("user", "wrong");    // Output: Invalid credentials
+
+////6
+function getProcessingFee(paymentMethod) {
+    let fee;
+
+    switch (paymentMethod.toLowerCase()) {
+        case 'credit':
+            fee = '2%';
+            break;
+        case 'debit':
+            fee = '1.5%';
+            break;
+        case 'paypal':
+            fee = '3%';
+            break;
+        default:
+            fee = 'Invalid payment method';
+    }
+
+    console.log(`Processing fee for ${paymentMethod}: ${fee}`);
+}
+
+// Test cases
+getProcessingFee('credit');  // Output: Processing fee for credit: 2%
+
+////7
+function determineWeatherCondition(temperature) {
+    const condition = temperature > 30 ? 'Hot' : 'Moderate';
+    console.log(`The weather condition is: ${condition}`);
+}
+
+// Test cases
+determineWeatherCondition(35);  // Output: The weather condition is: Hot
+
+////8
+function calculateSum(n) {
+    let sum = 0;
+    let i = 1;
+
+    do {
+        sum += i;
+        i++;
+    } while (i <= n);
+
+    console.log(`The sum of numbers from 1 to ${n} is: ${sum}`);
+}
+
+// Test cases
+calculateSum(5);  // Output: The sum of numbers from 1 to 5 is: 15
