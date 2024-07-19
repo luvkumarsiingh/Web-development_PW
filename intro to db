@@ -1,0 +1,67 @@
+1. What is a Database?
+Definition: A database is an organized collection of structured information or data, typically stored electronically in a computer system. It is designed to efficiently manage, retrieve, and manipulate data.
+
+Example: Consider an online bookstore. The database might contain tables for books, authors, and customers. Each table will store relevant data, such as book titles, author names, and customer details. The database allows for querying and managing this information effectively.
+
+Why We Need a Database:
+
+Efficiency: Databases allow for quick retrieval and management of large amounts of data.
+Data Integrity: Ensures accuracy and consistency of data.
+Scalability: Can handle increasing amounts of data and users.
+Security: Provides controlled access to data.
+Backup and Recovery: Facilitates data backup and recovery processes.
+2. File-Based Storage System
+Definition: In a file-based storage system, data is stored in files on a storage medium. Each file contains data in a specific format and is managed by the operating system.
+
+Example: A simple text file named contacts.txt may contain names and phone numbers of contacts. Each line represents a contact's details.
+
+Challenges of File-Based Storage:
+
+Data Redundancy: Multiple copies of the same data can exist, leading to inconsistency.
+Data Integrity: Lack of built-in mechanisms to ensure data consistency.
+Scalability: Managing large volumes of data becomes complex.
+Concurrency: Difficulties in handling multiple users accessing the data simultaneously.
+Data Security: Limited mechanisms to secure the data.
+3. What is DBMS (Database Management System)?
+Definition: A DBMS is software that provides an interface to manage and interact with databases. It allows for data creation, manipulation, retrieval, and administration.
+
+Need for DBMS:
+
+Centralized Management: Provides a central place for managing data.
+Efficient Data Access: Facilitates quick querying and data retrieval.
+Data Integrity and Security: Ensures data consistency and security.
+Concurrency Control: Manages simultaneous data access by multiple users.
+Backup and Recovery: Provides tools for data backup and restoration.
+4. Challenges of File-Based Storage Addressed by DBMS
+Redundancy: DBMS uses normalization to minimize data redundancy.
+Integrity: DBMS enforces constraints and rules to maintain data integrity.
+Concurrency: DBMS provides mechanisms to handle concurrent data access and transactions.
+Security: DBMS includes robust security features to protect data.
+Scalability: DBMS can handle large volumes of data and users efficiently.
+5. Types of Classification in DBMS
+Hierarchical Model: Data is organized in a tree-like structure. Example: IBM's Information Management System (IMS).
+Network Model: Data is organized as a graph with nodes and connections. Example: Integrated Data Store (IDS).
+Relational Model: Data is organized in tables (relations). Example: MySQL, PostgreSQL.
+Object-Oriented Model: Data is represented as objects similar to object-oriented programming. Example: ObjectDB.
+NoSQL Model: Data is stored in non-tabular forms, including key-value stores, document stores, column-family stores, and graph databases. Example: MongoDB, Redis.
+6. Significance of Data Modelling
+Definition: Data modeling is the process of creating a visual representation of data and its relationships. It helps in designing the database structure.
+
+Types of Data Modelling:
+
+Conceptual Data Model: High-level model focusing on the data's structure and relationship without technical details. Example: Entity-Relationship Diagram (ERD).
+Logical Data Model: More detailed model, focusing on data organization and relationships. Example: Logical ERD with attributes.
+Physical Data Model: Detailed model that specifies how data is stored in the database, including table structures, indexes, and constraints.
+7. 3-Schema Architecture
+Definition: The 3-schema architecture is a framework used to design and manage database systems, ensuring data abstraction and independence.
+
+Components:
+
+Internal Schema: Defines how data is physically stored in the database.
+Conceptual Schema: Defines the logical structure of the entire database, focusing on data relationships and constraints.
+External Schema: Defines different views of the database for various users or applications.
+Advantages:
+
+Data Abstraction: Separates data storage from how it is viewed, allowing changes in storage without affecting the user view.
+Data Independence: Changes in internal schema do not affect the conceptual schema or external views.
+Flexibility: Supports multiple user views and applications while maintaining a unified database.
