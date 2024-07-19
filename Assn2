@@ -1,0 +1,85 @@
+
+////1
+const square = (num) => num * num;
+
+const number = 5;  // You can change this number to test with different values
+const result = square(number);
+console.log(`The square of ${number} is: ${result}`);
+
+////2
+const ages = [19, 22, 19, 40, 30, 40, 24, 40, 21, 30, 24, 19, 21, 30];
+
+// Sort the array to simplify finding the median and range
+ages.sort((a, b) => a - b);
+
+const minAge = ages[0];
+const maxAge = ages[ages.length - 1];
+
+// Calculate median
+const middleIndex = Math.floor(ages.length / 2);
+let medianAge;
+if (ages.length % 2 === 0) {
+    medianAge = (ages[middleIndex - 1] + ages[middleIndex]) / 2;
+} else {
+    medianAge = ages[middleIndex];
+}
+
+// Calculate average
+const sum = ages.reduce((acc, age) => acc + age, 0);
+const averageAge = sum / ages.length;
+
+// Calculate range
+const range = maxAge - minAge;
+
+// Compare (min - average) and (max - average) using abs() method
+const minDiff = Math.abs(minAge - averageAge);
+const maxDiff = Math.abs(maxAge - averageAge);
+
+console.log(`Minimum Age: ${minAge}`);
+console.log(`Maximum Age: ${maxAge}`);
+console.log(`Median Age: ${medianAge}`);
+console.log(`Average Age: ${averageAge}`);
+console.log(`Range of Ages: ${range}`);
+console.log(`Absolute difference (min - average): ${minDiff}`);
+console.log(`Absolute difference (max - average): ${maxDiff}`);
+
+////3
+// Create a Map to store contact information
+const contactMap = new Map();
+
+// Function to add contact details to the Map
+function addContact(name, age, email, location) {
+    contactMap.set(name, { age, email, location });
+}
+
+// Function to retrieve contact details by name
+function getContactDetails(name) {
+    if (contactMap.has(name)) {
+        const contact = contactMap.get(name);
+        console.log(`Contact Details for ${name}:`);
+        console.log(`Age: ${contact.age}`);
+        console.log(`Email: ${contact.email}`);
+        console.log(`Location: ${contact.location}`);
+    } else {
+        console.log(`No contact found for ${name}`);
+    }
+}
+
+// Example usage
+addContact('Alice', 30, 'alice@example.com', 'New York');
+addContact('Bob', 25, 'bob@example.com', 'Los Angeles');
+
+getContactDetails('Alice');
+
+
+////4
+// Define the objects with properties name and age
+const person1 = {
+    name: 'Alice',
+    age: 30
+};
+
+const person2 = {
+    name: 'Bob',
+    age: 25
+};
