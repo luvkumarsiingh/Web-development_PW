@@ -1,0 +1,63 @@
+git init
+
+function greet() {
+    console.log('Hello, world!');
+}
+
+git add script.js
+git commit -m "Add initial script.js with greet function"
+
+
+git checkout -b feature-greeting
+
+
+function greet(name) {
+    console.log(`Hello, ${name}!`);
+}
+
+
+git add script.js
+git commit -m "Add personalized greeting function"
+
+Task 4:git checkout main
+git merge feature-greeting
+
+Task 5:git checkout main
+
+
+Create a GitHub repository for your JavaScript project
+git remote add origin <your-github-repo-url>
+git push -u origin main
+git clone <your-github-repo-url>
+git clone <your-github-repo-url>
+git merge origin/main
+git checkout -b feature-update
+
+function greet(name) {
+    console.log(`Hi, ${name}!`);
+}
+git add script.js
+git commit -m "Update greeting function"
+git checkout main
+// script.js
+function greet(name) {
+    console.log(`Hello, ${name}! Welcome to the project.`);
+}
+git add script.js
+git commit -m "Enhance greeting function"
+git checkout main
+// script.js
+function greet(name) {
+    console.log(`Hello, ${name}! Welcome to the project.`);
+}
+git add script.js
+git commit -m "Enhance greeting function"
+git merge feature-update
+git add <resolved-file>
+git commit
+git add obsolete.js
+git commit -m "Add obsolete.js"
+git rm obsolete.js
+git commit -m "Remove obsolete.js"
+git commit -m "Remove obsolete.js"
+
